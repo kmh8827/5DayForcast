@@ -1,0 +1,15 @@
+header {
+    width: 100%;
+    font-size: 48px;
+    height: 72px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.name {
+    background-color: wheat;
+    font-weight: bold;
+    width: 40%;
+    height: 100%;
+    padding: 10px;
+}
