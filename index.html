@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                     <input type="image" src="assets/lock.png" id="search">
                 </div>
                 <div class="addCity">
-                    
+
                 </div>
             </td>
             <td class="forcast">
@@ -34,7 +34,26 @@
                     <p class="lead" id="UVIndex">UV Index: </p>
                 </div>
                 <div class="jumbotron">
-                    <h1 class="display-6">5-Day Forcast at 12:00 P.M.</h1>
+                    <h1 class="display-6" id="5Day">5-Day Forcast at 12:00 P.M.</h1>
+                    <table>
+                        <tr>
+                            <td class="weatherBox">
+                                <div id="time4"></div>
+                            </td>
+                            <td class="weatherBox">
+                                <div id="time12"></div>
+                            </td>
+                            <td class="weatherBox">
+                                <div id="time20"></div>
+                            </td>
+                            <td class="weatherBox">
+                                <div id="time28"></div>
+                            </td>
+                            <td class="weatherBox">
+                                <div id="time36"></div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </td>
         </tr>

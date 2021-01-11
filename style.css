@@ -26,8 +26,24 @@ header {
 .forcast {
     width: 60%;
 }
+.weatherBox {
+    float: left;
+    width: 200px;
+    height: 250px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: royalblue;
+    border: 2px solid royalblue;
+}
 #search {
     height: 15%;
     width: 15%;
     padding: 0px 20px 0px 0px;
+}
+.insideWeather {
+    color: white;
+}
+.display-6 {
+    text-align: center;
 }
