@@ -3,6 +3,7 @@ getCity();
 $("#search").click(function() {
     var nameOfCity = $("#cityName").val();
     addCity(nameOfCity);
+    cityInfo(nameOfCity);
 });
 $(document).on("click",".city",function() {
     var getCity = $(this).text();
@@ -16,7 +17,8 @@ function addCity(cityName) {
     storeCity(cityName);
 }
 function cityInfo(thisCity) {
-    var addHere = $(".forcast");
+    console.log("hi");
+    var addHere = $("#displayName");
     addHere.text(thisCity);
 }
 function storeCity(cityName) {
