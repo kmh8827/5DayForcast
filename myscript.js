@@ -6,9 +6,11 @@ $("#search").click(function () {
     var nameOfCity = $("#cityName").val();
     addCity(nameOfCity);
     cityInfo(nameOfCity);
+    
 });
 $(document).on("click", ".city", function () {
     var getCity = $(this).text();
+    
     cityInfo(getCity);
 });
 function addCity(cityName) {
@@ -20,11 +22,12 @@ function addCity(cityName) {
 }
 function cityInfo(thisCity) {
     var addHere = $("#displayName");
-    addHere.text(thisCity);
+    var day = dayjs().format(" (MM/DD/YYYY)");
+    addHere.text(thisCity + day);
 
     var queryURLCity = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=" + thisCity + "&appid=3aedaa4c3534c982b48f6a82a6ddb305";
     var queryURL5Day = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q=" + thisCity + "&appid=3aedaa4c3534c982b48f6a82a6ddb305";
-    
+
 
     $.ajax({
         url: queryURLCity,
@@ -40,14 +43,15 @@ function cityInfo(thisCity) {
         var cloud = response.weather[0].icon;
         var imageURL = "http://openweathermap.org/img/w/" + cloud + ".png";
         var cloudImage = $("<img>");
-        cloudImage.attr("src",imageURL);
-        $("#displayName").append(cloudImage);
+
         latitude = cityLat;
         longitude = cityLong;
+
+        cloudImage.attr("src", imageURL);
+        $("#displayName").append(cloudImage);
         $("#temperature").text("Temperature: " + temperatureF);
         $("#humidity").text("Humidity: " + humidity + " %");
         $("#windSpeed").text("Wind Speed: " + windSpeed + " MPH");
-        console.log(latitude);
 
         $.ajax({
             url: queryURL5Day,
@@ -66,13 +70,10 @@ function cityInfo(thisCity) {
                 var UV = response.value;
                 $("#UVIndex").text("UV Index: " + UV);
             });
-            
         });
-
-    
     });
 
-    
+
 
 
 }
