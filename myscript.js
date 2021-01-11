@@ -37,6 +37,11 @@ function cityInfo(thisCity) {
         var temperatureF = ((temperatureK - 273.15) * 9 / 5 + 32).toFixed(2);
         var cityLat = response.coord.lat;
         var cityLong = response.coord.lon;
+        var cloud = response.weather[0].icon;
+        var imageURL = "http://openweathermap.org/img/w/" + cloud + ".png";
+        var cloudImage = $("<img>");
+        cloudImage.attr("src",imageURL);
+        $("#displayName").append(cloudImage);
         latitude = cityLat;
         longitude = cityLong;
         $("#temperature").text("Temperature: " + temperatureF);
