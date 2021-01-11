@@ -68,9 +68,9 @@ function cityInfo(thisCity) {
                 url: queryURL5Day,
                 type: "GET"
             }).then(function (response) { 
-                console.log(response);
                 //4,12,20,28,36
                 for (var i=4;i<40;i=i+8) {
+                    $("#time"+i).empty();
                     var humidPlace = $("<p>");
                     var tempPlace = $("<p>");
                     var iconPlace = $("<img>");
