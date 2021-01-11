@@ -17,9 +17,33 @@ function addCity(cityName) {
     storeCity(cityName);
 }
 function cityInfo(thisCity) {
-    console.log("hi");
     var addHere = $("#displayName");
     addHere.text(thisCity);
+
+    var queryURLCity = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q="+thisCity+"&appid=3aedaa4c3534c982b48f6a82a6ddb305";
+    var queryURL5Day = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast?q="+thisCity+"&appid=3aedaa4c3534c982b48f6a82a6ddb305";
+
+    $.ajax({
+        url: queryURLCity,
+        type: "GET"
+    }).then(function(response) {
+        console.log(response);
+        var temperatureK = response.main.temp;
+        var humidity = response.main.humidity;
+        var windSpeed = response.wind.speed;
+        var temperatureF = ((temperatureK-273.15)*9/5+32).toFixed(2);
+        $("#temperature").text("Temperature: " + temperatureF);
+        $("#humidity").text("Humidity: " + humidity + " %");
+        $("#windSpeed").text("Wind Speed: " + windSpeed + " MPH");
+    
+    });
+
+    $.ajax({
+        url: queryURL5Day,
+        type: "GET"
+    }).then(function(response) {
+        console.log(response);
+    })
 }
 function storeCity(cityName) {
     localStorage.setItem("cityName",JSON.stringify(cityName));
