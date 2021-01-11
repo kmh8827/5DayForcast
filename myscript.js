@@ -1,16 +1,23 @@
 getCity();
 
-$("#search").click(function(event) {
-    event.preventDefault();
+$("#search").click(function() {
     var nameOfCity = $("#cityName").val();
     addCity(nameOfCity);
 });
+$(document).on("click",".city",function() {
+    var getCity = $(this).text();
+    cityInfo(getCity);
+});
 function addCity(cityName) {
-    var name = $("<p>");
+    var name = $("<button>");
     name.text(cityName);
     name.attr("class","city");
     $(".addCity").append(name);
     storeCity(cityName);
+}
+function cityInfo(thisCity) {
+    var addHere = $(".forcast");
+    addHere.text(thisCity);
 }
 function storeCity(cityName) {
     localStorage.setItem("cityName",JSON.stringify(cityName));
