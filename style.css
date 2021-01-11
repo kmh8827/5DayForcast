@@ -7,9 +7,17 @@ header {
     text-align: center;
 }
 .name {
-    background-color: wheat;
+    background-color: lightblue;
     font-weight: bold;
-    width: 40%;
+    width: 35%;
     height: 100%;
-    padding: 10px;
+    padding: 20px 0px 20px 20px;
+}
+.forcast {
+    width: 60%;
+}
+#lock {
+    height: 15%;
+    width: 15%;
+    padding: 0px 20px 0px 0px;
 }
