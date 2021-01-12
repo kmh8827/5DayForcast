@@ -3,10 +3,13 @@
 
 <head>
     <title>5-day Forcast</title>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Dayjs() -->
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 
 </head>
@@ -18,13 +21,17 @@
             <td class="name">
                 <label for="cityName" class="form-label">Search for a City:</label>
                 <div class="input-group mb-3">
+                    <!-- User types city to search here -->
                     <input type="text" id="cityName" class="form-control">
+                    <!-- Icon when clicked runs functions -->
                     <input type="image" src="assets/lock.png" id="search">
                 </div>
                 <div class="addCity">
+
                 </div>
             </td>
             <td class="forcast">
+                <!-- Display weather information for city -->
                 <div class="jumbotron">
                     <h1 class="display-6" id="displayName"></h1>
                     <p class="lead" id="temperature">Temperature: </p>
@@ -33,23 +40,25 @@
                     <p class="lead" id="UVIndex">UV Index: </p>
                 </div>
                 <div class="jumbotron">
+                    <!-- Display the 5-Day Forcast here -->
                     <h1 class="display-6" id="5Day">5-Day Forcast at 12:00 P.M.</h1>
                     <table>
                         <tr>
+                            <!-- class weatherbox used to dispay each day from 5 day -->
                             <td class="weatherBox">
-                                <div id="time4"></div>
+                                <div id="time3"></div>
                             </td>
                             <td class="weatherBox">
-                                <div id="time12"></div>
+                                <div id="time11"></div>
                             </td>
                             <td class="weatherBox">
-                                <div id="time20"></div>
+                                <div id="time19"></div>
                             </td>
                             <td class="weatherBox">
-                                <div id="time28"></div>
+                                <div id="time27"></div>
                             </td>
                             <td class="weatherBox">
-                                <div id="time36"></div>
+                                <div id="time35"></div>
                             </td>
                         </tr>
                     </table>

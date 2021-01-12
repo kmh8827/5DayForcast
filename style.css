@@ -6,14 +6,28 @@ header {
     color: white;
     text-align: center;
 }
-.input-group-sm {
-    width: 60%;
+#search {
+    height: 15%;
+    width: 15%;
+    padding: 0px 20px 0px 0px;
 }
 .city {
     background-color: white;
     width: 80%;
     font-size: 24px;
     padding-left: 0px 10px 0px 0px;
+}
+.display-6 {
+    text-align: center;
+}
+.forcast {
+    width: 60%;
+}
+.input-group-sm {
+    width: 60%;
+}
+.insideWeather {
+    color: white;
 }
 .jumbotron {
     border:lightgray solid 1px;
@@ -26,9 +40,6 @@ header {
     width: 35%;
     padding: 20px 0px 20px 20px;
 }
-.forcast {
-    width: 60%;
-}
 .weatherBox {
     float: left;
     width: 200px;
@@ -39,14 +50,17 @@ header {
     background-color: royalblue;
     border: 2px solid royalblue;
 }
-#search {
-    height: 15%;
-    width: 15%;
-    padding: 0px 20px 0px 0px;
+/* Setting background for UV Index {*/ 
+.low {
+    background-color: lightgreen;
 }
-.insideWeather {
-    color: white;
+.moderate {
+    background-color: yellow;
 }
-.display-6 {
-    text-align: center;
+.high {
+    background-color: red;
 }
+.sever {
+    background-color: fuchsia;
+}
+/* } */
