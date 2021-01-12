@@ -138,6 +138,7 @@ function getCity() {
     var lastCity = JSON.parse(localStorage.getItem("cityName"));
     if (lastCity !== null) {
         addCity(lastCity);
+        cityInfo(lastCity);
     }
 
 }
